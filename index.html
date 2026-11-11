@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rilind Bricori</title>
+<meta name="description" content="Rilind Bricori — filmmaker and creative director based in Prishtina, Kosovo.">
+<meta name="theme-color" content="#0A0B12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rilind Bricori — Filmmaker & Creative Director">
+<meta property="og:description" content="Film, cinematography and visual storytelling. Based in Prishtina, Kosovo.">
+<meta property="og:image" content="photo.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%236C9BD9'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-style='italic' font-weight='900' font-size='28' fill='%230A0B12'%3ERB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+<style>
+:root {
+  /* Layout: blue-black ground taken from the portrait's own backdrop; wide italic display type, square edges, thin rules, grainy blue motion panels. The work leads; credentials sit quietly at the end. */
+  color-scheme: dark;
+  --ground: #0A0B12;
+  --panel: #10131D;
+  --line: #232838;
+  --ink: #F1F4F9;
+  --muted: #9CA6B8;
+  --blue: #6C9BD9;
+  --font: Archivo, "Helvetica Neue", Arial, system-ui, sans-serif;
+  --wrap: 1280px;
+  --gutter: clamp(16px, 4vw, 36px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.55; overflow-x: hidden; }
+a { color: var(--ink); }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+section[id] { scroll-margin-top: 24px; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+.wide { font-stretch: 125%; font-variation-settings: "wdth" 125; font-style: italic; font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.95; }
+.tag { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.more { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); }
+.more:hover { color: var(--blue); border-color: var(--blue); }
+svg { width: 13px; height: 13px; flex: none; }
+.cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+
+/* Navigation */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2px 28px; padding-block: 16px; }
+.brand { display: flex; flex-direction: column; justify-content: center; min-height: 44px; text-decoration: none; }
+.brand b { font-size: 18px; }
+.brand span { font-size: 9px; font-weight: 600; letter-spacing: 0.34em; text-transform: uppercase; color: var(--muted); }
+.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 2px clamp(16px, 3vw, 36px); }
+.nav a { display: flex; align-items: center; min-height: 44px; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; }
+.nav a:hover { color: var(--blue); }
+
+/* Home */
+.hero { position: relative; display: flex; flex-direction: column; align-items: center; padding-bottom: clamp(36px, 5vw, 64px); }
+.hero-photo { flex: none; width: min(100%, 860px); aspect-ratio: 1 / 1; min-height: 0; overflow: hidden;
+  -webkit-mask-image: radial-gradient(ellipse 50% 54% at 50% 46%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 54% at 50% 46%, #000 62%, transparent 100%); }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-name { position: relative; margin-top: clamp(-150px, -15vw, -56px); padding-top: 12vw; width: 100%; text-align: center; white-space: nowrap; font-size: min(8.2vw, 118px); background: linear-gradient(to bottom, rgba(10, 11, 18, 0) 0%, var(--ground) 62%); }
+.hero-sub { margin-top: clamp(12px, 1.6vw, 22px); font-size: clamp(11px, 1.3vw, 15px); font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; text-align: center; text-indent: 0.42em; }
+.hero-side { position: absolute; top: 34%; }
+.hero-side.l { left: 0; }
+.hero-side.r { right: 0; text-align: right; }
+
+.state { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px clamp(32px, 6vw, 88px); padding-block: clamp(40px, 6vw, 80px); border-top: 1px solid var(--line); }
+.state h2 { flex: 1 1 420px; min-width: 0; font-size: clamp(28px, 4.2vw, 58px); text-wrap: balance; }
+.state-text { flex: 1 1 340px; min-width: 0; max-width: 480px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.state-text p { color: var(--muted); text-wrap: pretty; }
+
+/* Roles */
+.roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.role { position: relative; min-height: clamp(260px, 26vw, 380px); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: clamp(18px, 2.4vw, 30px); }
+.role::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10, 11, 18, 0.35) 0%, rgba(10, 11, 18, 0.6) 40%, rgba(10, 11, 18, 0.95) 100%); }
+.role > :not(img) { position: relative; z-index: 1; }
+.role:hover .cover { transform: scale(1.05); }
+.role .n { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: var(--blue); }
+.role h3 { font-size: clamp(22px, 2.6vw, 34px); }
+.role p { font-size: 15px; color: #D5DCE8; max-width: 36ch; }
+
+/* Work */
+.work { display: flex; flex-direction: column; gap: clamp(24px, 3.4vw, 40px); padding-block: clamp(56px, 8vw, 104px); }
+.head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 48px; }
+.head h2 { font-size: clamp(34px, 5.4vw, 76px); }
+.head p { max-width: 36ch; color: var(--muted); }
+.cats { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--line); }
+.cat { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; color: var(--muted); font: inherit; font-size: clamp(15px, 1.6vw, 20px); font-weight: 900; font-style: italic; font-stretch: 125%; font-variation-settings: "wdth" 125; text-transform: uppercase; letter-spacing: -0.01em; min-height: 52px; padding: 0 clamp(14px, 2.4vw, 32px) 0 0; margin-right: clamp(14px, 2.4vw, 32px); cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
+.cat span { font-size: 11px; font-style: normal; font-stretch: 100%; font-variation-settings: "wdth" 100; letter-spacing: 0.16em; color: var(--blue); }
+.cat:hover { color: var(--ink); }
+.cat[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--blue); }
+.cat:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.empty { padding: clamp(40px, 6vw, 72px) 0; color: var(--muted); border-bottom: 1px solid var(--line); }
+.films { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 12px; }
+.film { position: relative; aspect-ratio: 16 / 9; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(16px, 2.2vw, 28px); text-decoration: none; background: var(--panel); }
+.film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10, 11, 18, 0.6) 0%, rgba(10, 11, 18, 0.25) 40%, rgba(10, 11, 18, 0.92) 100%); }
+.film > :not(img) { position: relative; z-index: 1; }
+.film:hover .cover { transform: scale(1.04); }
+.film .meta { display: flex; justify-content: space-between; gap: 12px; }
+.film .meta span { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.film h3 { font-size: clamp(30px, 4.6vw, 64px); }
+.film .open { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+
+.reels { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); padding-block: clamp(28px, 4vw, 48px) clamp(56px, 8vw, 104px); }
+.reels .head h2 { font-size: clamp(24px, 3.2vw, 42px); }
+.grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.tile { position: relative; aspect-ratio: 9 / 16; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 14px; text-decoration: none; background: var(--panel); }
+.tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10, 11, 18, 0.55) 0%, rgba(10, 11, 18, 0) 30%, rgba(10, 11, 18, 0) 55%, rgba(10, 11, 18, 0.9) 100%); }
+.tile > span { position: relative; z-index: 1; }
+.tile:hover .cover { transform: scale(1.06); }
+.tile .n { font-size: 24px; }
+.tile .go { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* About */
+.about { display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 7vw, 104px); padding-block: clamp(48px, 7vw, 96px); border-top: 1px solid var(--line); }
+.bio { flex: 3 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.bio h2 { font-size: clamp(28px, 4vw, 54px); }
+.bio p { max-width: 60ch; color: #D5DCE8; text-wrap: pretty; }
+.bio p.lead { font-size: clamp(18px, 1.7vw, 22px); line-height: 1.45; color: var(--ink); }
+.facts { flex: 2 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 36px; }
+.facts section { display: flex; flex-direction: column; gap: 12px; }
+.facts li, .facts .row { display: flex; gap: 8px 20px; padding-block: 10px; border-top: 1px solid var(--line); font-size: 15px; }
+.facts .row dt { flex: 0 0 130px; color: var(--muted); }
+.facts .row dd { flex: 1 1 0; min-width: 0; }
+.studio { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 22px; background: var(--panel); }
+.studio b { font-size: 20px; }
+.studio p { font-size: 15px; color: var(--muted); }
+
+/* Contact */
+.band { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; min-height: clamp(300px, 34vw, 440px); padding: 56px var(--gutter); text-align: center; }
+.band::after { content: ""; position: absolute; inset: 0; background: rgba(10, 11, 18, 0.62); }
+.band > :not(img) { position: relative; z-index: 1; }
+.band h2 { font-size: clamp(28px, 4.4vw, 60px); text-wrap: balance; }
+.band .mail { font-size: clamp(17px, 1.8vw, 22px); font-weight: 600; overflow-wrap: anywhere; }
+.band .mail:hover { color: var(--blue); }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding-block: 22px 36px; }
+
+/* Project pages */
+.project { padding-bottom: clamp(48px, 7vw, 96px); }
+.back { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-block: 8px 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; }
+.back:hover { color: var(--blue); }
+.p-cover { position: relative; aspect-ratio: 16 / 9; max-height: 620px; width: 100%; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(18px, 3vw, 44px); }
+.p-cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10, 11, 18, 0.2) 30%, rgba(10, 11, 18, 0.92) 100%); }
+.p-cover > :not(img) { position: relative; z-index: 1; }
+.p-cover h1 { font-size: clamp(40px, 9vw, 132px); }
+.p-body { display: flex; flex-wrap: wrap; gap: 32px clamp(40px, 7vw, 104px); padding-top: clamp(28px, 4vw, 48px); }
+.p-credits { flex: 1 1 320px; min-width: 0; }
+.p-credits .row { display: flex; gap: 8px 20px; padding-block: 12px; border-top: 1px solid var(--line); }
+.p-credits .row:last-child { border-bottom: 1px solid var(--line); }
+.p-credits dt { flex: 0 0 120px; color: var(--muted); }
+.p-credits dd { flex: 1 1 0; min-width: 0; font-weight: 600; }
+.p-note { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.p-note p { max-width: 46ch; color: var(--muted); }
+.p-note .logline { font-size: clamp(19px, 1.9vw, 26px); line-height: 1.4; color: var(--ink); text-wrap: pretty; }
+.stills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: clamp(32px, 5vw, 64px); }
+.stills img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--panel); }
+.stills .wide-still { grid-column: 1 / -1; aspect-ratio: auto; }
+.stills.scope, .stills.two, .stills.four, .stills.wide2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stills.wide2 img { aspect-ratio: 1200 / 741; }
+.stills.four img { aspect-ratio: 1500 / 1080; }
+.stills.scope img { aspect-ratio: 2.55 / 1; }
+@media (max-width: 700px) { .stills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.p-next { display: flex; justify-content: flex-end; padding-top: clamp(24px, 3vw, 40px); }
+
+@media (max-width: 900px) {
+  .hero-side { display: none; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cover { transition: none; }
+  .role:hover .cover, .film:hover .cover, .tile:hover .cover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="brand" href="#home"><b class="wide">Rilind Bricori</b><span>Filmmaker</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+<div class="wrap" id="home">
+  <section class="hero">
+    <span class="tag hero-side l">Prishtina<br>Kosovo</span>
+    <span class="tag hero-side r">Film<br>Commercial<br>Music video</span>
+    <div class="hero-photo"><img src="photo.webp" alt="Portrait of Rilind Bricori"></div>
+    <h1 class="wide hero-name">Rilind Bricori</h1>
+    <p class="hero-sub">Filmmaker &amp; Creative Director</p>
+  </section>
+
+  <section class="state">
+    <h2 class="wide">Film, cinematography and visual storytelling.</h2>
+    <div class="state-text">
+      <p>Working across independent filmmaking and commercial production, translating ideas into visual narratives through directing, cinematography and creative development.</p>
+      <a class="more" href="#work">View work <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></a>
+    </div>
+  </section>
+</div>
+
+<section class="roles" aria-label="Roles">
+  <div class="role">
+    <img class="cover" src="svc-1.webp" alt="">
+    <span class="n">01</span>
+    <h3 class="wide">Director</h3>
+    <p>Developing ideas and the visual concept, directing actors, and realising film and commercial projects.</p>
+  </div>
+  <div class="role">
+    <img class="cover" src="svc-2.webp" alt="">
+    <span class="n">02</span>
+    <h3 class="wide">Cinematographer</h3>
+    <p>Composition, lighting, camera and movement: building the visual language of a project.</p>
+  </div>
+  <div class="role">
+    <img class="cover" src="svc-3.webp" alt="">
+    <span class="n">03</span>
+    <h3 class="wide">Producer</h3>
+    <p>Developing and organising the production, coordinating crews and managing delivery.</p>
+  </div>
+</section>
+
+<section class="wrap work" id="work">
+  <div class="head">
+    <h2 class="wide">Work</h2>
+    <p>Film, commercial and music video work. Open a project for its credits.</p>
+  </div>
+  <div class="cats" role="tablist" aria-label="Work categories">
+    <button class="cat" type="button" role="tab" id="tab-film" aria-controls="cat-film" aria-selected="true" data-cat="film"><span>01</span> Film</button>
+    <button class="cat" type="button" role="tab" id="tab-commercial" aria-controls="cat-commercial" aria-selected="false" data-cat="commercial"><span>02</span> Commercial</button>
+    <button class="cat" type="button" role="tab" id="tab-music" aria-controls="cat-music" aria-selected="false" data-cat="music"><span>03</span> Music Videos</button>
+  </div>
+  <div class="cat-panel" id="cat-film" role="tabpanel" aria-labelledby="tab-film">
+    <div class="films">
+    <a class="film" href="#manhattan">
+      <img class="cover" src="mh-01.webp" alt="Still from Manhattan: the couple at the bar">
+      <div class="meta"><span>Short film · 2025</span><span>Producer</span></div>
+      <div><h3 class="wide">Manhattan</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+    </a>
+    <a class="film" href="#magi">
+      <img class="cover" src="proj-magi.webp" alt="">
+      <div class="meta"><span>Short film</span><span>Filmmaker</span></div>
+      <div><h3 class="wide">Magi</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+    </a>
+    </div>
+  </div>
+  <div class="cat-panel" id="cat-commercial" role="tabpanel" aria-labelledby="tab-commercial" hidden>
+    <div class="films">
+      <a class="film" href="#ranchfest">
+        <img class="cover" src="rf-cover.webp" alt="Still from Ranch Fest: a rider on a rearing horse at sunset">
+        <div class="meta"><span>Commercial</span><span>Music Night · 7th Edition</span></div>
+        <div><h3 class="wide">Ranch Fest</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+      </a>
+      <a class="film" href="#dicasa">
+        <img class="cover" src="dc-hero.webp" alt="Still from the DICASA ad: a woman in pearls beside a discount wheel">
+        <div class="meta"><span>Commercial · 2026</span><span>Black Week</span></div>
+        <div><h3 class="wide">Dicasa</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+  <div class="cat-panel" id="cat-music" role="tabpanel" aria-labelledby="tab-music" hidden>
+    <div class="films">
+      <a class="film" href="#andrr">
+        <img class="cover" src="mv-01.webp" alt="Still from Andërr: MONi on a chair under a single spotlight">
+        <div class="meta"><span>Music video · 2026</span><span>Director</span></div>
+        <div><h3 class="wide">MONi — Andërr</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+      </a>
+      <a class="film" href="#tomli">
+        <img class="cover" src="tm-01.webp" alt="Still from Tomli: a man in a white felt cap in front of a stone clock tower">
+        <div class="meta"><span>Music video · 2026</span><span>Director</span></div>
+        <div><h3 class="wide">JOLLE — Tomli</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+      </a>
+      <a class="film" href="#jetoj">
+        <img class="cover" src="js-01.webp" alt="Still from Jetoj edhe pa ty: Moni Sopa leaning on a vintage Mercedes among green hills">
+        <div class="meta"><span>Music video · 2026</span><span>Director</span></div>
+        <div><h3 class="wide">Moni Sopa — Jetoj edhe pa ty</h3><span class="open">View project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<div class="wrap">
+  <section class="about" id="about">
+    <div class="bio">
+      <span class="tag">About</span>
+      <h2 class="wide">Filmmaker &amp; Creative Director</h2>
+      <p class="lead">Rilind Bricori is a filmmaker and creative director based in Prishtina, Kosovo, working across film, cinematography, and visual storytelling.</p>
+      <p>With experience in both independent filmmaking and commercial production, his work focuses on translating ideas into visual narratives through directing, cinematography, and creative development.</p>
+      <p>His approach combines cinematic language, visual composition, and a strong attention to detail, with an interest in exploring different forms of visual expression.</p>
+      <p>He is the founder and owner of Spektri Studio, a creative production studio working across film and visual communication.</p>
+    </div>
+    <div class="facts">
+      <section>
+        <span class="tag">Background</span>
+        <ul>
+          <li>Bachelor in Film Production, Faculty of Arts, University of Prishtina</li>
+          <li>Around five years in commercial and audiovisual production</li>
+          <li>Commercials and content for businesses</li>
+          <li>Student and independent film projects</li>
+          <li>Music videos</li>
+        </ul>
+      </section>
+      <section>
+        <span class="tag">Craft</span>
+        <dl>
+          <div class="row"><dt>Film</dt><dd>Directing, Producing</dd></div>
+          <div class="row"><dt>Camera</dt><dd>Cinematography, Lighting</dd></div>
+          <div class="row"><dt>Post-production</dt><dd>Video Editing, Color Grading</dd></div>
+          <div class="row"><dt>Creative</dt><dd>Creative Direction, Visual Development</dd></div>
+          <div class="row"><dt>Software</dt><dd>DaVinci Resolve, Adobe Premiere Pro</dd></div>
+        </dl>
+      </section>
+      <section class="studio">
+        <span class="tag">Founder &amp; Owner</span>
+        <b class="wide">Spektri Studio</b>
+        <p>A production and creative studio focused on film, commercials, visual content and creative communication.</p>
+        <a class="more" href="https://spektri.studio" target="_blank" rel="noopener">spektri.studio <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+      </section>
+    </div>
+  </section>
+</div>
+
+<section class="band" id="contact">
+  <img class="cover" src="band.webp" alt="">
+  <span class="tag">Contact</span>
+  <h2 class="wide">Based in Prishtina, Kosovo.</h2>
+  <a class="mail" href="mailto:bricoririlind@gmail.com">bricoririlind@gmail.com</a>
+</section>
+</main>
+
+<article class="wrap project" id="ranchfest" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="rf-hero.webp" alt="Still from Ranch Fest: a woman in a cowboy hat beside a horse">
+    <span class="tag">Commercial · Music Night</span>
+    <h1 class="wide">Ranch Fest</h1>
+  </div>
+  <div class="p-body">
+    <div class="p-note">
+      <p class="logline">Commercial for the 7th edition of Ranch Fest Music Night.</p>
+      <a class="more" href="https://youtu.be/XR2S1jrUc5M" target="_blank" rel="noopener">Watch on YouTube <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+    <dl class="p-credits">
+      <div class="row"><dt>Client</dt><dd>Ranch Fest</dd></div>
+      <div class="row"><dt>Format</dt><dd>Commercial / AD</dd></div>
+      <div class="row"><dt>Edition</dt><dd>7th Edition</dd></div>
+    </dl>
+  </div>
+  <div class="stills">
+    <img src="rf-01.webp" alt="Still: a rider on a rearing horse at sunset">
+    <img src="rf-02.webp" alt="Still: kid on a high ropes swing">
+    <img src="rf-03.webp" alt="Still: horses grazing in the evening light">
+    <img src="rf-04.webp" alt="Still: rider on a quad bike in dust">
+    <img src="rf-05.webp" alt="Still: rider on a white horse">
+    <img src="rf-06.webp" alt="Still: hooves kicking up dust">
+    <img src="rf-07.webp" alt="Still: hand on a climbing rope">
+    <img src="rf-08.webp" alt="Still: girl in the Ranch Fest caravan door">
+    <img src="rf-09.webp" alt="Still: kid crossing a ropes course">
+  </div>
+  <div class="p-next"><a class="more" href="#dicasa">Next project: Dicasa <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+</article>
+
+<article class="wrap project" id="dicasa" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="dc-01.webp" alt="Still from the DICASA ad: a woman in a black dress and pearls among autumn trees at night">
+    <span class="tag">Commercial · Di Casa Home Design</span>
+    <h1 class="wide">Dicasa</h1>
+  </div>
+  <div class="p-body">
+    <div class="p-note">
+      <p class="logline">Ka të sillsh je nafakli — a Black Week commercial for Di Casa Home Design.</p>
+      <a class="more" href="https://youtu.be/u_BplUCnt74" target="_blank" rel="noopener">Watch on YouTube <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+    <dl class="p-credits">
+      <div class="row"><dt>Client</dt><dd>Di Casa Home Design</dd></div>
+      <div class="row"><dt>Format</dt><dd>Commercial / AD</dd></div>
+      <div class="row"><dt>Runtime</dt><dd>31 sec</dd></div>
+      <div class="row"><dt>Year</dt><dd>2026</dd></div>
+    </dl>
+  </div>
+  <div class="stills scope">
+    <img class="wide-still" src="dc-02.webp" alt="Still: red wine poured into a glass">
+    <img src="dc-03.webp" alt="Still: wine served at a table">
+    <img src="dc-04.webp" alt="Still: woman holding a glass of red wine">
+    <img src="dc-hero.webp" alt="Still: woman in pearls beside the discount wheel">
+    <img src="dc-05.webp" alt="Still: woman standing next to the discount wheel">
+  </div>
+  <div class="p-next"><a class="more" href="#andrr">Next project: Andërr <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+</article>
+
+<article class="wrap project" id="andrr" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="mv-04.webp" alt="Still from Andërr: MONi in a white shirt standing in a blue spotlight beside his shadow">
+    <span class="tag">Official music video · MONi</span>
+    <h1 class="wide">Andërr</h1>
+  </div>
+  <div class="p-body">
+    <div class="p-note">
+      <p class="logline">Official music video for MONi’s “Andërr”, directed by Rilind Bricori and produced by SPEKTRI.</p>
+      <a class="more" href="https://youtu.be/7lkc6CI_-1U" target="_blank" rel="noopener">Watch on YouTube <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+    <dl class="p-credits">
+      <div class="row"><dt>Artist</dt><dd>MONi</dd></div>
+      <div class="row"><dt>Director</dt><dd>Rilind Bricori</dd></div>
+      <div class="row"><dt>Production</dt><dd>SPEKTRI</dd></div>
+      <div class="row"><dt>Camera &amp; Gaffer</dt><dd>Adem Krelani</dd></div>
+      <div class="row"><dt>Lighting &amp; Gear</dt><dd>KORNIZA</dd></div>
+      <div class="row"><dt>BTS &amp; Photo</dt><dd>Ermal Karagjyzi</dd></div>
+      <div class="row"><dt>Post-production</dt><dd>SPEKTRI</dd></div>
+      <div class="row"><dt>Runtime</dt><dd>2 min 35 sec</dd></div>
+      <div class="row"><dt>Year</dt><dd>2026</dd></div>
+    </dl>
+  </div>
+  <div class="stills two">
+    <img class="wide-still" src="mv-02.webp" alt="Still: MONi tied with rope, facing the camera in haze">
+    <img src="mv-01.webp" alt="Still: MONi on a chair under a single spotlight">
+    <img src="mv-03.webp" alt="Still: MONi in silhouette against blue haze">
+    <img src="mv-05.webp" alt="Still: MONi in a red jersey on a white cube beside a yellow ladder">
+    <img src="mv-06.webp" alt="Still: MONi looking up in the blue spotlight">
+  </div>
+  <div class="p-next"><a class="more" href="#tomli">Next project: Tomli <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+</article>
+
+<article class="wrap project" id="tomli" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="tm-02.webp" alt="Still from Tomli: JOLLE in a fur coat on horseback under a dark mountain sky">
+    <span class="tag">Music video · JOLLE</span>
+    <h1 class="wide">Tomli</h1>
+  </div>
+  <div class="p-body">
+    <div class="p-note">
+      <p class="logline">Music video for JOLLE’s “Tomli”, directed by Rilind Bricori and Vranin Gafuri and produced by Spektri.</p>
+      <a class="more" href="https://youtu.be/CefIynGvgrE" target="_blank" rel="noopener">Watch on YouTube <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+    <dl class="p-credits">
+      <div class="row"><dt>Artist</dt><dd>JOLLE</dd></div>
+      <div class="row"><dt>Directors</dt><dd>Rilind Bricori &amp; Vranin Gafuri</dd></div>
+      <div class="row"><dt>Screenplay</dt><dd>Vranin Gafuri</dd></div>
+      <div class="row"><dt>Production</dt><dd>Spektri</dd></div>
+      <div class="row"><dt>Barber &amp; Logistics</dt><dd>Lavdim Lajqi</dd></div>
+      <div class="row"><dt>Runtime</dt><dd>2 min 15 sec</dd></div>
+      <div class="row"><dt>Year</dt><dd>2026</dd></div>
+    </dl>
+  </div>
+  <div class="stills four">
+    <img src="tm-03.webp" alt="Still: extreme close-up of an eye">
+    <img src="tm-04.webp" alt="Still: a woman in a white felt cap dancing by a misty window">
+    <img src="tm-05.webp" alt="Still: JOLLE wrapped in the Albanian flag on a mountain meadow">
+    <img src="tm-06.webp" alt="Still: a woman in traditional dress in a dim room">
+  </div>
+  <div class="p-next"><a class="more" href="#jetoj">Next project: Jetoj edhe pa ty <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+</article>
+
+<article class="wrap project" id="jetoj" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="js-02.webp" alt="Still from Jetoj edhe pa ty: Moni Sopa on a rocky summit with faded figures in the haze">
+    <span class="tag">Music video · Moni Sopa</span>
+    <h1 class="wide" style="font-size: clamp(34px, 6.4vw, 96px)">Jetoj edhe pa ty</h1>
+  </div>
+  <div class="p-body">
+    <div class="p-note">
+      <p class="logline">Music video for Moni Sopa’s “Jetoj edhe pa ty”, directed by Rilind Bricori.</p>
+      <a class="more" href="https://youtu.be/Rh4nQc9cww0" target="_blank" rel="noopener">Watch on YouTube <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+    <dl class="p-credits">
+      <div class="row"><dt>Artist</dt><dd>Moni Sopa</dd></div>
+      <div class="row"><dt>Director</dt><dd>Rilind Bricori</dd></div>
+      <div class="row"><dt>Runtime</dt><dd>2 min 45 sec</dd></div>
+      <div class="row"><dt>Year</dt><dd>2026</dd></div>
+    </dl>
+  </div>
+  <div class="stills wide2">
+    <img src="js-03.webp" alt="Still: Moni Sopa in sunglasses in the driver’s seat">
+    <img src="js-04.webp" alt="Still: Moni Sopa singing beside the car in the hills">
+    <img src="js-05.webp" alt="Still: Mercedes hood star on a night road">
+    <img src="js-06.webp" alt="Still: Moni Sopa reflected in the side mirror at night">
+  </div>
+  <div class="p-next"><a class="more" href="#manhattan">Next project: Manhattan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+</article>
+
+<article class="wrap project" id="manhattan" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="mh-02.webp" alt="Still from Manhattan: the woman at the bar">
+    <span class="tag">Short film · 2025</span>
+    <h1 class="wide">Manhattan</h1>
+  </div>
+  <div class="p-body">
+    <div class="p-note">
+      <p class="logline">On a winter night in the city, a married couple stops for a drink — but an unexpected encounter with a forgotten past puts true emotions to the test.</p>
+      <a class="more" href="https://www.behance.net/gallery/229581083/MANHATTAN-A-short-film" target="_blank" rel="noopener">View on Behance <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+    <dl class="p-credits">
+      <div class="row"><dt>Role</dt><dd>Producer</dd></div>
+      <div class="row"><dt>Format</dt><dd>Fiction / Short film</dd></div>
+      <div class="row"><dt>Runtime</dt><dd>8 min</dd></div>
+      <div class="row"><dt>Year</dt><dd>2025</dd></div>
+    </dl>
+  </div>
+  <div class="stills">
+    <img src="mh-01.webp" alt="Still: the couple at the bar">
+    <img src="mh-03.webp" alt="Still: the couple in a car at night">
+    <img src="mh-04.webp" alt="Still: woman smoking at a table">
+    <img src="mh-05.webp" alt="Still: man alone at the bar">
+    <img src="mh-06.webp" alt="Still: man at the bar, speaking">
+    <img src="mh-07.webp" alt="Still: man and woman talking over a drink">
+  </div>
+  <div class="p-next"><a class="more" href="#magi">Next project: Magi <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+</article>
+
+<article class="wrap project" id="magi" data-project>
+  <a class="back" href="#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg> All work</a>
+  <div class="p-cover">
+    <img class="cover" src="proj-magi.webp" alt="">
+    <span class="tag">Short film</span>
+    <h1 class="wide">Magi</h1>
+  </div>
+  <div class="p-body">
+    <dl class="p-credits">
+      <div class="row"><dt>Role</dt><dd>Filmmaker</dd></div>
+      <div class="row"><dt>Format</dt><dd>Fiction / Short film</dd></div>
+    </dl>
+    <div class="p-note">
+      <p>Stills, video and full credits for this project are being prepared.</p>
+      <a class="more" href="#manhattan">Next project: Manhattan <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</article>
+
+<footer class="wrap foot">
+  <span class="tag">© 2026 Rilind Bricori</span>
+  <span class="tag">Prishtina, Kosovo</span>
+</footer>
+
+<script>
+(function () {
+  var main = document.getElementById('main');
+  var projects = Array.prototype.slice.call(document.querySelectorAll('[data-project]'));
+  function route() {
+    var name = (location.hash || '').slice(1);
+    var current = null;
+    projects.forEach(function (p) { if (p.id === name) current = p; });
+    projects.forEach(function (p) { p.hidden = p !== current; });
+    main.hidden = !!current;
+    if (current) { window.scrollTo(0, 0); return; }
+    var target = name && document.getElementById(name);
+    if (target) target.scrollIntoView();
+  }
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.cat'));
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (o) {
+        var on = o === t;
+        o.setAttribute('aria-selected', on ? 'true' : 'false');
+        document.getElementById('cat-' + o.dataset.cat).hidden = !on;
+      });
+    });
+  });
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
